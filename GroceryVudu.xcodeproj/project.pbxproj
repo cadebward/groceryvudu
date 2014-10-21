@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3A9B9F19E6FE36004D69E6 /* cupcake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C3A9B9E19E6FE36004D69E6 /* cupcake.jpg */; };
+		0C3A9BA319E7059E004D69E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3A9BA219E7059E004D69E6 /* DetailViewController.swift */; };
+		0C6DAD3019E4542B00BD62E7 /* clock_@16px.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DAD2E19E4542B00BD62E7 /* clock_@16px.png */; };
+		0C6DAD3119E4542B00BD62E7 /* clock_@32px.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DAD2F19E4542B00BD62E7 /* clock_@32px.png */; };
+		0C6DAD3319E4586100BD62E7 /* basket_60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DAD3219E4586100BD62E7 /* basket_60@3x.png */; };
+		0C6DAD3519E45A4900BD62E7 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DAD3419E45A4900BD62E7 /* RecipeModel.swift */; };
 		0C7C628E19D1FA24006EBE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C628D19D1FA24006EBE25 /* AppDelegate.swift */; };
 		0C7C629019D1FA24006EBE25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C628F19D1FA24006EBE25 /* ViewController.swift */; };
 		0C7C629319D1FA24006EBE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C629119D1FA24006EBE25 /* Main.storyboard */; };
 		0C7C629519D1FA24006EBE25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C629419D1FA24006EBE25 /* Images.xcassets */; };
 		0C7C629819D1FA24006EBE25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C629619D1FA24006EBE25 /* LaunchScreen.xib */; };
 		0C7C62A419D1FA24006EBE25 /* GroceryVuduTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C62A319D1FA24006EBE25 /* GroceryVuduTests.swift */; };
+		0CA33D8319DDD2A600C53CB0 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA33D8219DDD2A600C53CB0 /* RecipeCell.swift */; };
+		0CA33D8A19DDE05600C53CB0 /* bookmark_32pt (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0CA33D8919DDE05600C53CB0 /* bookmark_32pt (1).png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C3A9B9E19E6FE36004D69E6 /* cupcake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cupcake.jpg; sourceTree = "<group>"; };
+		0C3A9BA219E7059E004D69E6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0C6DAD2E19E4542B00BD62E7 /* clock_@16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_@16px.png"; sourceTree = "<group>"; };
+		0C6DAD2F19E4542B00BD62E7 /* clock_@32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_@32px.png"; sourceTree = "<group>"; };
+		0C6DAD3219E4586100BD62E7 /* basket_60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basket_60@3x.png"; sourceTree = "<group>"; };
+		0C6DAD3419E45A4900BD62E7 /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		0C7C628819D1FA24006EBE25 /* GroceryVudu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryVudu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7C628C19D1FA24006EBE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7C628D19D1FA24006EBE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +50,8 @@
 		0C7C629D19D1FA24006EBE25 /* GroceryVuduTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryVuduTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7C62A219D1FA24006EBE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7C62A319D1FA24006EBE25 /* GroceryVuduTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryVuduTests.swift; sourceTree = "<group>"; };
+		0CA33D8219DDD2A600C53CB0 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		0CA33D8919DDE05600C53CB0 /* bookmark_32pt (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark_32pt (1).png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +95,13 @@
 			children = (
 				0C7C628D19D1FA24006EBE25 /* AppDelegate.swift */,
 				0C7C628F19D1FA24006EBE25 /* ViewController.swift */,
+				0C6DAD3419E45A4900BD62E7 /* RecipeModel.swift */,
 				0C7C629119D1FA24006EBE25 /* Main.storyboard */,
+				0CA33D8219DDD2A600C53CB0 /* RecipeCell.swift */,
 				0C7C629419D1FA24006EBE25 /* Images.xcassets */,
 				0C7C629619D1FA24006EBE25 /* LaunchScreen.xib */,
 				0C7C628B19D1FA24006EBE25 /* Supporting Files */,
+				0C3A9BA219E7059E004D69E6 /* DetailViewController.swift */,
 			);
 			path = GroceryVudu;
 			sourceTree = "<group>";
@@ -90,6 +109,11 @@
 		0C7C628B19D1FA24006EBE25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C3A9B9E19E6FE36004D69E6 /* cupcake.jpg */,
+				0C6DAD3219E4586100BD62E7 /* basket_60@3x.png */,
+				0C6DAD2E19E4542B00BD62E7 /* clock_@16px.png */,
+				0C6DAD2F19E4542B00BD62E7 /* clock_@32px.png */,
+				0CA33D8919DDE05600C53CB0 /* bookmark_32pt (1).png */,
 				0C7C628C19D1FA24006EBE25 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,8 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6DAD3019E4542B00BD62E7 /* clock_@16px.png in Resources */,
 				0C7C629319D1FA24006EBE25 /* Main.storyboard in Resources */,
 				0C7C629819D1FA24006EBE25 /* LaunchScreen.xib in Resources */,
+				0C3A9B9F19E6FE36004D69E6 /* cupcake.jpg in Resources */,
+				0CA33D8A19DDE05600C53CB0 /* bookmark_32pt (1).png in Resources */,
+				0C6DAD3119E4542B00BD62E7 /* clock_@32px.png in Resources */,
+				0C6DAD3319E4586100BD62E7 /* basket_60@3x.png in Resources */,
 				0C7C629519D1FA24006EBE25 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA33D8319DDD2A600C53CB0 /* RecipeCell.swift in Sources */,
+				0C6DAD3519E45A4900BD62E7 /* RecipeModel.swift in Sources */,
+				0C3A9BA319E7059E004D69E6 /* DetailViewController.swift in Sources */,
 				0C7C629019D1FA24006EBE25 /* ViewController.swift in Sources */,
 				0C7C628E19D1FA24006EBE25 /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +439,7 @@
 				0C7C62A919D1FA24006EBE25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C7C62AA19D1FA24006EBE25 /* Build configuration list for PBXNativeTarget "GroceryVuduTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +448,7 @@
 				0C7C62AC19D1FA24006EBE25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
