@@ -22,7 +22,7 @@ struct RecipeModel {
     var directions: String
     
     var tag: [String]
-    var image: UIImage = UIImage(named: "")
+//    var image: UIImage = UIImage(named: "")
 }
 
 struct Ingredient {

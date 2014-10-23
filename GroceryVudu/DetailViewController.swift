@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import QuartzCore
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var scroller: UIScrollView!
-    @IBOutlet var myview: UIView!
-    @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var viewTimeAndPrep: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        viewTimeAndPrep.layer.borderColor = (UIColor.grayColor()).CGColor
+//        viewTimeAndPrep.layer.borderWidth = CGFloat(1.0)
         
 //        var bounds: CGRect = UIScreen.mainScreen().bounds
 //        var screenWidth: CGFloat = bounds.size.width
