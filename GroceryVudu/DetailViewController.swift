@@ -6,6 +6,20 @@
 //  Copyright (c) 2014 Cade Ward. All rights reserved.
 //
 
+
+
+/* 
+
+        RULES OF SWIFT ---
+        1. new lines are your BFF - if you don't use them then you will die a horrible, terrible, painful death of wondering why the -F- nothing works.
+
+
+
+
+*/
+
+
+
 import UIKit
 import QuartzCore
 
@@ -13,20 +27,30 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var viewTimeAndPrep: UIView!
     
+    @IBOutlet weak var textBoxTest: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        viewTimeAndPrep.layer.borderColor = (UIColor.grayColor()).CGColor
-//        viewTimeAndPrep.layer.borderWidth = CGFloat(1.0)
+        // ideally, this is data from some other source
+        var measurements = "1 Cup"
+        var details = "granulated sugar"
         
-//        var bounds: CGRect = UIScreen.mainScreen().bounds
-//        var screenWidth: CGFloat = bounds.size.width
-//        
-//        scroller.scrollEnabled = true
-//        scroller.contentSize = CGSizeMake(10, 1200)
-//        println(screenWidth)
+        // create an attr string with attrs (awesome)
+        var attrMeasurements = NSMutableAttributedString(string:"\(measurements) ", attributes:[NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 19)!])
         
-        // Do any additional setup after loading the view.
+        var attrDetails = NSMutableAttributedString(string:"\(details)\n", attributes:[NSFontAttributeName : UIFont(name: "HelveticaNeue", size: 19)!])
+        
+        // MAKE A NEW FING line for EVERYHTING
+        // first make the attr string with the attr crap
+        var attrString = NSMutableAttributedString(attributedString: attrMeasurements)
+
+        // then and ONLY THEN append on to it --- on a new line---------- k?
+        attrString.appendAttributedString(attrDetails)
+        
+        // then use attributedText instead of .text woot!
+        textBoxTest.attributedText = attrString
+
     }
 
     override func didReceiveMemoryWarning() {

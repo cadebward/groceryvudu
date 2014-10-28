@@ -226,14 +226,14 @@
                         <viewControllerLayoutGuide type="bottom" id="v9i-lC-87l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lzl-eF-sih">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dle-ER-4My">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tqa-YN-2XD">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                        <rect key="frame" x="0.0" y="-354" width="600" height="1000"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halloween Cupcakes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHC-DJ-QUu">
                                                 <rect key="frame" x="8" y="88" width="584" height="34"/>
@@ -381,6 +381,35 @@
                                                     <constraint firstItem="iY5-NY-u7h" firstAttribute="top" secondItem="sz7-LM-X0Z" secondAttribute="top" id="ueQ-FC-pLC"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-Kq-3gL">
+                                                <rect key="frame" x="8" y="572" width="584" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="dOl-pI-3Hk"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ingredients">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMd-Fp-lul">
+                                                <rect key="frame" x="8" y="605" width="584" height="138"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="ghaaggg">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -388,11 +417,14 @@
                                             <constraint firstItem="l6f-mC-BTf" firstAttribute="width" secondItem="Tqa-YN-2XD" secondAttribute="width" multiplier="0.5" id="0ZH-ZH-aqq"/>
                                             <constraint firstAttribute="trailing" secondItem="OMR-L2-T4T" secondAttribute="trailing" id="1yI-qi-dlw"/>
                                             <constraint firstItem="TcA-VO-oJi" firstAttribute="leading" secondItem="Tqa-YN-2XD" secondAttribute="leading" constant="8" id="31d-h6-oiv"/>
+                                            <constraint firstAttribute="trailing" secondItem="pYj-Kq-3gL" secondAttribute="trailing" constant="8" id="3CP-5d-Gge"/>
                                             <constraint firstAttribute="trailing" secondItem="hHC-DJ-QUu" secondAttribute="trailing" constant="8" id="C1i-MC-Sun"/>
+                                            <constraint firstItem="pYj-Kq-3gL" firstAttribute="leading" secondItem="Tqa-YN-2XD" secondAttribute="leading" constant="8" id="JQd-TC-Xom"/>
                                             <constraint firstItem="Cf7-ff-c3n" firstAttribute="leading" secondItem="Tqa-YN-2XD" secondAttribute="leading" id="Jjs-15-qL0"/>
                                             <constraint firstItem="OMR-L2-T4T" firstAttribute="top" secondItem="Cf7-ff-c3n" secondAttribute="bottom" id="M02-Mn-VYO"/>
                                             <constraint firstAttribute="trailing" secondItem="TcA-VO-oJi" secondAttribute="trailing" constant="8" id="PuA-xZ-apQ"/>
                                             <constraint firstItem="l6f-mC-BTf" firstAttribute="leading" secondItem="Tqa-YN-2XD" secondAttribute="leading" id="RD5-fg-FMc"/>
+                                            <constraint firstItem="pYj-Kq-3gL" firstAttribute="top" secondItem="sz7-LM-X0Z" secondAttribute="bottom" constant="8" id="Weh-GX-9ky"/>
                                             <constraint firstItem="sz7-LM-X0Z" firstAttribute="leading" secondItem="Tqa-YN-2XD" secondAttribute="leading" id="YAb-7a-a6i"/>
                                             <constraint firstItem="OMR-L2-T4T" firstAttribute="width" secondItem="Tqa-YN-2XD" secondAttribute="width" multiplier="0.5" id="cDZ-eh-cZz"/>
                                             <constraint firstItem="hHC-DJ-QUu" firstAttribute="leading" secondItem="Tqa-YN-2XD" secondAttribute="leading" constant="8" id="dGR-5C-Zku"/>
@@ -426,8 +458,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="cDG-c1-IRf"/>
                     <navigationItem key="navigationItem" id="syv-tn-rDa"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="800"/>
+                    <size key="freeformSize" width="600" height="1200"/>
                     <connections>
+                        <outlet property="textBoxTest" destination="RMd-Fp-lul" id="CDs-dx-MJc"/>
                         <outlet property="viewTimeAndPrep" destination="sz7-LM-X0Z" id="Ikg-OH-Z9X"/>
                     </connections>
                 </viewController>
