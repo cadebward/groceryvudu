@@ -32,7 +32,7 @@ struct Ingredient {
 }
 
 enum Unit: String {
-    case Cup = "cup";
+    case Cup = "Cup";
     case Tablespoon = "tbsp";
     case Teaspoon = "tsp";
     case Pint = "pint"
