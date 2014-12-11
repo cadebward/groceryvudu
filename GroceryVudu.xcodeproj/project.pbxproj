@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C23BB1D1A17CB0A00037F9D /* GroceryVudu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C23BB1B1A17CB0A00037F9D /* GroceryVudu.xcdatamodeld */; };
+		0C23BB1F1A17D6E300037F9D /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C23BB1E1A17D6E300037F9D /* GroceryListViewController.swift */; };
+		0C23BB211A181B9D00037F9D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C23BB201A181B9D00037F9D /* FavoritesViewController.swift */; };
 		0C3A9B9F19E6FE36004D69E6 /* cupcake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C3A9B9E19E6FE36004D69E6 /* cupcake.jpg */; };
 		0C3A9BA319E7059E004D69E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3A9BA219E7059E004D69E6 /* DetailViewController.swift */; };
+		0C5A692E1A2E3EC500EE407A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5A692D1A2E3EC500EE407A /* Images.xcassets */; };
+		0C5A69321A2E44BE00EE407A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A69311A2E44BE00EE407A /* TabBarController.swift */; };
+		0C5DB9AB1A2E516D00835A3B /* creamynoodles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C5DB9AA1A2E516D00835A3B /* creamynoodles.jpg */; };
+		0C5DB9AD1A2E52EC00835A3B /* mushrooms.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C5DB9AC1A2E52EC00835A3B /* mushrooms.jpg */; };
+		0C5DB9AF1A2E538B00835A3B /* cookie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C5DB9AE1A2E538B00835A3B /* cookie.jpg */; };
 		0C6DAD3019E4542B00BD62E7 /* clock_@16px.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DAD2E19E4542B00BD62E7 /* clock_@16px.png */; };
 		0C6DAD3119E4542B00BD62E7 /* clock_@32px.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DAD2F19E4542B00BD62E7 /* clock_@32px.png */; };
 		0C6DAD3319E4586100BD62E7 /* basket_60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DAD3219E4586100BD62E7 /* basket_60@3x.png */; };
@@ -16,11 +24,14 @@
 		0C7C628E19D1FA24006EBE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C628D19D1FA24006EBE25 /* AppDelegate.swift */; };
 		0C7C629019D1FA24006EBE25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C628F19D1FA24006EBE25 /* ViewController.swift */; };
 		0C7C629319D1FA24006EBE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C629119D1FA24006EBE25 /* Main.storyboard */; };
-		0C7C629519D1FA24006EBE25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C629419D1FA24006EBE25 /* Images.xcassets */; };
 		0C7C629819D1FA24006EBE25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7C629619D1FA24006EBE25 /* LaunchScreen.xib */; };
 		0C7C62A419D1FA24006EBE25 /* GroceryVuduTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C62A319D1FA24006EBE25 /* GroceryVuduTests.swift */; };
 		0CA33D8319DDD2A600C53CB0 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA33D8219DDD2A600C53CB0 /* RecipeCell.swift */; };
 		0CA33D8A19DDE05600C53CB0 /* bookmark_32pt (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0CA33D8919DDE05600C53CB0 /* bookmark_32pt (1).png */; };
+		0CF14E561A301DAD00A9F2D1 /* recipe05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CF14E521A301DAD00A9F2D1 /* recipe05.jpg */; };
+		0CF14E571A301DAD00A9F2D1 /* recipe06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CF14E531A301DAD00A9F2D1 /* recipe06.jpg */; };
+		0CF14E581A301DAD00A9F2D1 /* recipe07.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CF14E541A301DAD00A9F2D1 /* recipe07.jpeg */; };
+		0CF14E591A301DAD00A9F2D1 /* recipe08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CF14E551A301DAD00A9F2D1 /* recipe08.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C23BB1C1A17CB0A00037F9D /* GroceryVudu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryVudu.xcdatamodel; sourceTree = "<group>"; };
+		0C23BB1E1A17D6E300037F9D /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		0C23BB201A181B9D00037F9D /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		0C3A9B9E19E6FE36004D69E6 /* cupcake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cupcake.jpg; sourceTree = "<group>"; };
 		0C3A9BA219E7059E004D69E6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0C5A692D1A2E3EC500EE407A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../../.Trash/Images.xcassets; sourceTree = "<group>"; };
+		0C5A69311A2E44BE00EE407A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0C5DB9AA1A2E516D00835A3B /* creamynoodles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creamynoodles.jpg; sourceTree = "<group>"; };
+		0C5DB9AC1A2E52EC00835A3B /* mushrooms.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mushrooms.jpg; sourceTree = "<group>"; };
+		0C5DB9AE1A2E538B00835A3B /* cookie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cookie.jpg; sourceTree = "<group>"; };
 		0C6DAD2E19E4542B00BD62E7 /* clock_@16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_@16px.png"; sourceTree = "<group>"; };
 		0C6DAD2F19E4542B00BD62E7 /* clock_@32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_@32px.png"; sourceTree = "<group>"; };
 		0C6DAD3219E4586100BD62E7 /* basket_60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basket_60@3x.png"; sourceTree = "<group>"; };
@@ -45,13 +64,16 @@
 		0C7C628D19D1FA24006EBE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C7C628F19D1FA24006EBE25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C7C629219D1FA24006EBE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0C7C629419D1FA24006EBE25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0C7C629719D1FA24006EBE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0C7C629D19D1FA24006EBE25 /* GroceryVuduTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryVuduTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7C62A219D1FA24006EBE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7C62A319D1FA24006EBE25 /* GroceryVuduTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryVuduTests.swift; sourceTree = "<group>"; };
 		0CA33D8219DDD2A600C53CB0 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		0CA33D8919DDE05600C53CB0 /* bookmark_32pt (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark_32pt (1).png"; sourceTree = "<group>"; };
+		0CF14E521A301DAD00A9F2D1 /* recipe05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe05.jpg; sourceTree = "<group>"; };
+		0CF14E531A301DAD00A9F2D1 /* recipe06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe06.jpg; sourceTree = "<group>"; };
+		0CF14E541A301DAD00A9F2D1 /* recipe07.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe07.jpeg; sourceTree = "<group>"; };
+		0CF14E551A301DAD00A9F2D1 /* recipe08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe08.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,7 @@
 		0C7C627F19D1FA24006EBE25 = {
 			isa = PBXGroup;
 			children = (
+				0C5A69311A2E44BE00EE407A /* TabBarController.swift */,
 				0C7C628A19D1FA24006EBE25 /* GroceryVudu */,
 				0C7C62A019D1FA24006EBE25 /* GroceryVuduTests */,
 				0C7C628919D1FA24006EBE25 /* Products */,
@@ -98,10 +121,13 @@
 				0C6DAD3419E45A4900BD62E7 /* RecipeModel.swift */,
 				0C7C629119D1FA24006EBE25 /* Main.storyboard */,
 				0CA33D8219DDD2A600C53CB0 /* RecipeCell.swift */,
-				0C7C629419D1FA24006EBE25 /* Images.xcassets */,
 				0C7C629619D1FA24006EBE25 /* LaunchScreen.xib */,
 				0C7C628B19D1FA24006EBE25 /* Supporting Files */,
 				0C3A9BA219E7059E004D69E6 /* DetailViewController.swift */,
+				0C5A692D1A2E3EC500EE407A /* Images.xcassets */,
+				0C23BB1B1A17CB0A00037F9D /* GroceryVudu.xcdatamodeld */,
+				0C23BB1E1A17D6E300037F9D /* GroceryListViewController.swift */,
+				0C23BB201A181B9D00037F9D /* FavoritesViewController.swift */,
 			);
 			path = GroceryVudu;
 			sourceTree = "<group>";
@@ -109,8 +135,15 @@
 		0C7C628B19D1FA24006EBE25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0C3A9B9E19E6FE36004D69E6 /* cupcake.jpg */,
 				0C6DAD3219E4586100BD62E7 /* basket_60@3x.png */,
+				0C3A9B9E19E6FE36004D69E6 /* cupcake.jpg */,
+				0C5DB9AE1A2E538B00835A3B /* cookie.jpg */,
+				0C5DB9AA1A2E516D00835A3B /* creamynoodles.jpg */,
+				0CF14E521A301DAD00A9F2D1 /* recipe05.jpg */,
+				0CF14E531A301DAD00A9F2D1 /* recipe06.jpg */,
+				0CF14E541A301DAD00A9F2D1 /* recipe07.jpeg */,
+				0CF14E551A301DAD00A9F2D1 /* recipe08.jpg */,
+				0C5DB9AC1A2E52EC00835A3B /* mushrooms.jpg */,
 				0C6DAD2E19E4542B00BD62E7 /* clock_@16px.png */,
 				0C6DAD2F19E4542B00BD62E7 /* clock_@32px.png */,
 				0CA33D8919DDE05600C53CB0 /* bookmark_32pt (1).png */,
@@ -217,14 +250,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF14E581A301DAD00A9F2D1 /* recipe07.jpeg in Resources */,
+				0CF14E561A301DAD00A9F2D1 /* recipe05.jpg in Resources */,
 				0C6DAD3019E4542B00BD62E7 /* clock_@16px.png in Resources */,
+				0CF14E591A301DAD00A9F2D1 /* recipe08.jpg in Resources */,
+				0C5A692E1A2E3EC500EE407A /* Images.xcassets in Resources */,
 				0C7C629319D1FA24006EBE25 /* Main.storyboard in Resources */,
+				0C5DB9AB1A2E516D00835A3B /* creamynoodles.jpg in Resources */,
+				0CF14E571A301DAD00A9F2D1 /* recipe06.jpg in Resources */,
 				0C7C629819D1FA24006EBE25 /* LaunchScreen.xib in Resources */,
 				0C3A9B9F19E6FE36004D69E6 /* cupcake.jpg in Resources */,
 				0CA33D8A19DDE05600C53CB0 /* bookmark_32pt (1).png in Resources */,
+				0C5DB9AF1A2E538B00835A3B /* cookie.jpg in Resources */,
+				0C5DB9AD1A2E52EC00835A3B /* mushrooms.jpg in Resources */,
 				0C6DAD3119E4542B00BD62E7 /* clock_@32px.png in Resources */,
 				0C6DAD3319E4586100BD62E7 /* basket_60@3x.png in Resources */,
-				0C7C629519D1FA24006EBE25 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA33D8319DDD2A600C53CB0 /* RecipeCell.swift in Sources */,
+				0C23BB1F1A17D6E300037F9D /* GroceryListViewController.swift in Sources */,
+				0C23BB211A181B9D00037F9D /* FavoritesViewController.swift in Sources */,
+				0C5A69321A2E44BE00EE407A /* TabBarController.swift in Sources */,
+				0C23BB1D1A17CB0A00037F9D /* GroceryVudu.xcdatamodeld in Sources */,
 				0C6DAD3519E45A4900BD62E7 /* RecipeModel.swift in Sources */,
 				0C3A9BA319E7059E004D69E6 /* DetailViewController.swift in Sources */,
 				0C7C629019D1FA24006EBE25 /* ViewController.swift in Sources */,
@@ -456,6 +500,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0C23BB1B1A17CB0A00037F9D /* GroceryVudu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0C23BB1C1A17CB0A00037F9D /* GroceryVudu.xcdatamodel */,
+			);
+			currentVersion = 0C23BB1C1A17CB0A00037F9D /* GroceryVudu.xcdatamodel */;
+			path = GroceryVudu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0C7C628019D1FA24006EBE25 /* Project object */;
 }

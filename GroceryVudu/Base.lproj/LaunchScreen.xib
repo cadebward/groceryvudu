@@ -17,8 +17,12 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="basket_60@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-q7-ruc">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basket_white_60" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-q7-ruc">
                     <rect key="frame" x="180" y="191" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="92M-Yx-cgD"/>
+                        <constraint firstAttribute="height" constant="120" id="tqE-dk-9lU"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,6 +39,6 @@
         </view>
     </objects>
     <resources>
-        <image name="basket_60@3x.png" width="180" height="180"/>
+        <image name="basket_white_60" width="60" height="60"/>
     </resources>
 </document>

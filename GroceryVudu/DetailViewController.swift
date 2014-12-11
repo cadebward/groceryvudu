@@ -25,6 +25,7 @@
 
 import UIKit
 import QuartzCore
+import CoreData
 
 class DetailViewController: UIViewController {
     
@@ -48,62 +49,32 @@ class DetailViewController: UIViewController {
     // prob should leave this alone... here there be dragons...
     @IBOutlet weak var viewTimeAndPrep: UIView!
     
+    var currentRecipe: RecipeModel = RecipeModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // this sets the height
-        println()
         
         /*
          *    THIS CRAP IS DYNAMIC / test data
          *
          */
+        
         // ideally, this comes from some other SOURCE
-        let item1Ingredient1 = Ingredient(amount: 12, unit: Unit.Cup, name: "Granulated Sugar")
-        let item1Ingredient2 = Ingredient(amount: 6, unit: Unit.Cup, name: "Egg Substitute")
-        let item1Ingredient3 = Ingredient(amount: 3, unit: Unit.Cup, name: "Canola Oil")
-        let item1Ingredients = [item1Ingredient1, item1Ingredient2, item1Ingredient3]
-        
-        let author = "Robin The Hood"
-        let title = "Robbin Cakes"
-        // pass in a string with the image name here 
-        let image = UIImage(named: "cupcake.jpg")
-        let prepTime = 15
-        let cookTime = 25
-        let totalTime = prepTime + cookTime
-        
-        let directions = "First cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as well\n\nFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as well\n\nFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as wellFirst cook some frog eyes in the cauldren.\n\nThis would be a new line and stuff would happen here as well"
-        
+        //// change this out when imge is working /////
+        let image = currentRecipe.image
         
         ////// END CRAP ////////
         
         
         // CHANGE ITEM1INGREDIENTS TO W/E COMES FROM SOURCE
-        testlabel.attributedText = getLblContents(item1Ingredients)
-        lblTitle.text = title
-        lblAuthor.text = "By \(author)"
+        testlabel.attributedText = getLblContents(currentRecipe.ingredients)
+        lblTitle.text = currentRecipe.name
+        lblAuthor.text = "By \(currentRecipe.author)"
         imgPreview.image = image
-        lblTotalTime.text = "\(totalTime)"
-        lblPrepTime.text = "\(prepTime) mins"
-        lblCookTime.text = "\(cookTime) mins"
-        lblDirections.text = directions
-        
-        testlabel.sizeToFit()
-        lblDirections.sizeToFit()
-        
-        var scrollHeight = 565 + 20 + 60 + lblDirections.bounds.height + testlabel.bounds.height
-        
-        var newFrame = viewScrollingView.frame;
-        newFrame.size.height = scrollHeight;
-        
-        viewScrollingView.frame = newFrame
-        
-        // viewScrollingView.frame.size = CGSize(width: CGFloat(scrollview.bounds.width), height: CGFloat(scrollHeight))
-        
-        // viewScrollingView.sizeThatFits(CGSize(width: CGFloat(scrollview.bounds.width), height: CGFloat(scrollHeight)))
-        println(viewScrollingView.bounds.height)
-
-
+        lblTotalTime.text = "\(currentRecipe.totalTime)"
+        lblPrepTime.text = "\(currentRecipe.prepTime) mins"
+        lblCookTime.text = "\(currentRecipe.cookTime) mins"
+        lblDirections.text = currentRecipe.directions
     }
 
     override func didReceiveMemoryWarning() {
@@ -167,47 +138,57 @@ class DetailViewController: UIViewController {
         return "\(convertedAmount) \(unit.rawValue)"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func addToShoppingList(sender: AnyObject) {
+        // save each ingredient to database
+        saveEachItem(currentRecipe.ingredients)
+        var alert = UIAlertController(title: "Alert", message: "The ingredients have been added to the shopping list.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
-    */
+    
+    func saveEachItem(ingredients: [Ingredient]) {
+        // setup some random iOS stuff so we can access the db
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context: NSManagedObjectContext = appDel.managedObjectContext!
+        
+        // equiv of: FROM GroceryList
+        let entity = NSEntityDescription.entityForName("GroceryList", inManagedObjectContext: context)
+        
+        for ingredient in ingredients {
+            var record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
+            
+            // set each value as a single item
+            record.setValue("\(ingredient.name)", forKey: "item")
 
+            // finally, save the item
+            var error: NSError?
+            if !context.save(&error) {
+                println("Error saving: \(error) - \(error?.userInfo)")
+            }
+        }
+    }
+    @IBAction func favoriteBtnPress(sender: AnyObject) {
+        addToFavorites(currentRecipe)
+        var alert = UIAlertController(title: "Alert", message: "The recipe has been added to your favorites", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func addToFavorites(recipe: RecipeModel) {
+        // setup some random iOS stuff so we can access the db
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context: NSManagedObjectContext = appDel.managedObjectContext!
+        
+        // equiv of: FROM Favorites
+        let entity = NSEntityDescription.entityForName("Favorites", inManagedObjectContext: context)
+        let record = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: context)
+        
+        record.setValue("\(recipe.name)", forKey: "name")
+        
+        // finally, save the item
+        var error: NSError?
+        if !context.save(&error) {
+            println("Error saving: \(error) - \(error?.userInfo)")
+        }
+    }
 }
-
-
-
-// ideally, this is data from some other source
-//        var measurements = "1 Cup"
-//        var details = "granulated sugar"
-
-// create an attr string with attrs (awesome)
-//        var attrMeasurements = NSMutableAttributedString(string:"\(measurements) ", attributes:[NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 19)!])
-
-//        var attrDetails = NSMutableAttributedString(string:"\(details)\n", attributes:[NSFontAttributeName : UIFont(name: "HelveticaNeue", size: 19)!])
-
-// MAKE A NEW FING line for EVERYHTING
-// first make the attr string with the attr crap
-//        var attrString = NSMutableAttributedString(attributedString: attrMeasurements)
-
-// then and ONLY THEN append on to it --- on a new line---------- k?
-//        attrString.appendAttributedString(attrDetails)
-//        attrString.appendAttributedString(attrMeasurements)
-//        attrString.appendAttributedString(attrDetails)
-//        attrString.appendAttributedString(attrMeasurements)
-//        attrString.appendAttributedString(attrDetails)
-//        attrString.appendAttributedString(attrMeasurements)
-//        attrString.appendAttributedString(attrDetails)
-//        attrString.appendAttributedString(attrMeasurements)
-//        attrString.appendAttributedString(attrDetails)
-//        attrString.appendAttributedString(attrMeasurements)
-//        attrString.appendAttributedString(attrDetails)
-
-// then use attributedText instead of .text woot!
-//        textBoxTest.attributedText = attrString
-//        testlabel.attributedText = attrString
